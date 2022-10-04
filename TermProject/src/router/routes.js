@@ -6,6 +6,17 @@ const routes = [
     children: [
       { path: '', component: () => import('pages/LoginPage.vue') },
       { path: '/register', component: () => import('pages/RegisterPage.vue') },
+      { path: '/dashboard', component: () => import('pages/DashboardPage.vue') }
+
+    ]
+  },
+
+  {
+    path: '/',
+    component: () => import('layouts/UserLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/LoginPage.vue') },
+      { path: '/register', component: () => import('pages/RegisterPage.vue') },
       { path: '/rental', component: () => import('pages/RentalLaptopPage.vue') },
       { path: '/dashboard', component: () => import('pages/DashboardPage.vue') }
 

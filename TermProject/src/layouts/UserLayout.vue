@@ -14,6 +14,9 @@
         <q-toolbar-title>
           Laptop Rental System
         </q-toolbar-title>
+
+        <q-btn flat round dense icon="notifications" class="q-mr-xs" />
+        <q-btn flat round dense icon="account_circle"/>
       </q-toolbar>
     </q-header>
 
@@ -62,16 +65,10 @@ const linksList = [
     icon: 'laptop',
     link:'/rental'
   },
-  {
-    title: 'Dashboard',
-    caption: 'Dashboard',
-    icon: 'dashboard',
-    link:'/dashboard'
-  },
 ]
 
 export default defineComponent({
-  name: 'MainLayout',
+  name: 'UserLayout',
 
   components: {
     EssentialLink
