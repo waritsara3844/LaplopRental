@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center">
-    <q-card class="my-card bg-cyan-4 q-px-md q-py-md">
+    <q-card class="my-card bg-pink-6 q-px-md q-py-md" >
       <div class="flex flex-center">
         <q-icon name="account_circle" color="white" size="4rem"/>
       </div>
@@ -47,8 +47,8 @@
             />
           </div>
           <div>
-            <q-btn label="Submit" type="submit" color="cyan-5" class="q-mt-md"/>
-            <q-btn label="Reset" type="reset" color="cyan-5"  class="q-ml-md q-mt-md"/>
+            <q-btn label="Submit" type="submit" color="pink-7" class="q-mt-md" />
+            <q-btn label="Reset" type="reset" color="pink-7"  class="q-ml-md q-mt-md"/>
           </div>
         </q-from>
       </q-card-section>

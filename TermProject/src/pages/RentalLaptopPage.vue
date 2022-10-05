@@ -7,7 +7,7 @@
       </div>
    </div>
    <div class="row q-pa-md q-gutter-md">
-      <div class="columns q-gutter-md">
+      <div class="col q-gutter-md">
         <q-card class="my-card">
           <q-card-section class="bg-grey-6 text-white">
             <div class="text-h6">Our Changing Planet</div>
@@ -21,7 +21,7 @@
           </q-card-actions>
         </q-card>
       </div>
-      <div class="columns q-gutter-md">
+      <div class="col q-gutter-md">
         <q-card class="my-card">
           <q-card-section class="bg-grey-6 text-white">
             <div class="text-h6">Our Changing Planet</div>
@@ -35,7 +35,7 @@
           </q-card-actions>
         </q-card>
       </div>
-      <div class=" columns q-gutter-md">
+      <div class=" col q-gutter-md">
         <q-card class="my-card">
           <q-card-section class="bg-grey-6 text-white">
             <div class="text-h6">Our Changing Planet</div>
@@ -50,7 +50,7 @@
         </q-card>
       </div>
   </div>
-  
+
    </q-page>
 </template>
 
