@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated >
-      <q-toolbar class="bg-pink-6 text-white">
+    <q-header elevated class="bg-pink-6">
+      <q-toolbar class="q-pt-xl">
         <q-btn
           flat
           dense
@@ -11,25 +11,15 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
-          Laptop Rental System
-        </q-toolbar-title>
+        <q-toolbar-title><strong>Rental System</strong></q-toolbar-title>
+        <q-btn flat round dense icon="search" class="q-mr-xs" />
+        <q-btn flat round dense icon="group_add" />
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      class="bg-pink-6 text-white"
-    >
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label
-          header
-          class="text-white"
-        >
-          Navigation
-        </q-item-label>
+        <q-item-label header> Navigation </q-item-label>
 
         <EssentialLink
           v-for="link in essentialLinks"
@@ -46,47 +36,53 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
+import { defineComponent, ref } from "vue";
+import EssentialLink from "components/EssentialLink.vue";
 
 const linksList = [
   {
-    title: 'Home',
-    caption: 'Landing Page',
-    icon: 'home',
-    link:'/'
+    title: "Home",
+    caption: "Landing Page",
+    icon: "home",
+    link: "/",
   },
   {
-    title: 'Laptop',
-    caption: 'Rental Laptop',
-    icon: 'laptop',
-    link:'/rental'
+    title: "Register",
+    caption: "Register Page",
+    icon: "home",
+    link: "/",
   },
   {
-    title: 'Dashboard',
-    caption: 'Dashboard',
-    icon: 'dashboard',
-    link:'/dashboard'
+    title: "Laptop",
+    caption: "Rental Laptop",
+    icon: "laptop",
+    link: "/rental",
   },
-]
+  {
+    title: "Dashboard",
+    caption: "Dashboard",
+    icon: "dashboard",
+    link: "http://localhost:8080/#/dashboard",
+  },
+];
 
 export default defineComponent({
-  name: 'MainLayout',
+  name: "MainLayout",
 
   components: {
-    EssentialLink
+    EssentialLink,
   },
 
-  setup () {
-    const leftDrawerOpen = ref(false)
+  setup() {
+    const leftDrawerOpen = ref(false);
 
     return {
       essentialLinks: linksList,
       leftDrawerOpen,
-      toggleLeftDrawer () {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
-    }
-  }
-})
+      toggleLeftDrawer() {
+        leftDrawerOpen.value = !leftDrawerOpen.value;
+      },
+    };
+  },
+});
 </script>
