@@ -105,6 +105,7 @@ export default {
   setup () {
     return {
       dialog:ref(false),
+      payment:ref(false),
     }
   }
 }
