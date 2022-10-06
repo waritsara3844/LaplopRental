@@ -1,6 +1,6 @@
 <template>
-   <q-page-container class="q-pa-md">
-    <div class="row q-pa-md justify-center">
+   <q-page class="q-ml-md q-mr-md">
+    <div class="row q-pa-md justify-center q-mt-md">
         <div class="q-gutter-sm q-mr-sm">
           <q-btn
             icon="storefront"
@@ -26,7 +26,7 @@
               <img src="https://cdn.quasar.dev/img/mountains.jpg">
 
               <q-card-actions align="center">
-                <q-btn flat round color="yellow" class="text-h6">Inprocess</q-btn>
+                <q-btn flat round color="yellow" class="text-h6" @click="dialog = true">Inprocess</q-btn>
               </q-card-actions>
             </q-card>
           </div>
@@ -81,16 +81,30 @@
           </div>
 
       </div>
+      <!--Dialog -->
+      <q-dialog v-model="dialog" persistent>
+        <q-card>
+          <q-card-section class="row items-center">
+            <q-avatar icon="laptop" color="primary" text-color="white" />
+            <span class="q-ml-sm">This laptop has  in process</span>
+          </q-card-section>
+          <q-card-actions align="right">
+            <q-btn flat label="Cancel" color="primary" v-close-popup />
+            <q-btn flat label="payment" color="primary" v-close-popup />
+          </q-card-actions>
+        </q-card>
+      </q-dialog>
 
-   </q-page-container>
+   </q-page>
 </template>
 
 <script>
+import { ref } from 'vue'
 export default {
   name:"RentalLaptopPage",
   setup () {
     return {
-      lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      dialog:ref(false),
     }
   }
 }
