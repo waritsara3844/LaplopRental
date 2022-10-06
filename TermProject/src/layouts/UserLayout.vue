@@ -15,7 +15,9 @@
           Laptop Rental System
         </q-toolbar-title>
 
-        <q-btn flat round dense icon="notifications" class="q-mr-xs" />
+        <q-btn push flat round icon="notifications" @click="this.$router.push('/rental')">
+          <q-badge floating color="black" >22</q-badge>
+        </q-btn>
         <q-btn flat round dense icon="account_circle"/>
       </q-toolbar>
     </q-header>
