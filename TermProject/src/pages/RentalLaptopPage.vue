@@ -1,57 +1,88 @@
 <template>
-   <q-page padding>
-    <div class="flex flex-center q-mt-md" >
-      <div class="q-gutter-lg">
-        <q-btn icon="shopping_cart" color="pink-6" label="Shop"  size=30px />
-        <q-btn icon="dashboard" color="pink-6" label="Status" size=30px />
+   <q-page-container class="q-pa-md">
+    <div class="row q-pa-md justify-center">
+        <div class="q-gutter-sm q-mr-sm">
+          <q-btn
+            icon="storefront"
+            outline
+            rounded
+            color="pink-5"
+            label="Shop"
+          />
+        </div>
+        <div class="q-gutter-sm q-ml-sm">
+          <q-btn
+            icon="radio_button_checked"
+            outline
+            rounded
+            color="pink-5"
+            label="Check Status"
+          />
+        </div>
       </div>
-   </div>
-   <div class="row q-pa-md q-gutter-md">
-      <div class="col q-gutter-md">
-        <q-card class="my-card">
-          <q-card-section class="bg-grey-6 text-white">
-            <div class="text-h6">Our Changing Planet</div>
-            <div class="text-subtitle2">by John Doe</div>
-          </q-card-section>
+      <div class="row"> <!---How to set the col to 3 column--->
+          <div class="col-4 q-pa-md">
+            <q-card class="my-card">
+              <img src="https://cdn.quasar.dev/img/mountains.jpg">
 
-          <q-separator />
+              <q-card-actions align="center">
+                <q-btn flat round color="yellow" class="text-h6">Inprocess</q-btn>
+              </q-card-actions>
+            </q-card>
+          </div>
 
-          <q-card-actions align="right">
-            <q-btn flat>Action 1</q-btn>
-          </q-card-actions>
-        </q-card>
+          <div class="col-4 q-pa-md">
+            <q-card class="my-card">
+              <img src="https://cdn.quasar.dev/img/mountains.jpg">
+
+              <q-card-actions align="center">
+                <q-btn flat round color="green" class="text-h6">Successful</q-btn>
+              </q-card-actions>
+            </q-card>
+          </div>
+
+          <div class="col-4 q-pa-md">
+            <q-card class="my-card">
+              <img src="https://cdn.quasar.dev/img/mountains.jpg">
+
+              <q-card-actions align="center">
+                <q-btn flat round color="red" class="text-h6">Rented</q-btn>
+              </q-card-actions>
+            </q-card>
+          </div>
+
+          <div class="col-4 q-pa-md">
+            <q-card class="my-card">
+              <img src="https://cdn.quasar.dev/img/mountains.jpg">
+
+              <q-card-actions align="center">
+                <q-btn flat round color="red" class="text-h6">Rented</q-btn>
+              </q-card-actions>
+            </q-card>
+          </div>
+
+          <div class="col-4 q-pa-md">
+            <q-card class="my-card">
+              <img src="https://cdn.quasar.dev/img/mountains.jpg">
+
+              <q-card-actions align="center">
+                <q-btn flat round color="yellow" class="text-h6">Inprocess</q-btn>
+              </q-card-actions>
+            </q-card>
+          </div>
+          <div class="col-4 q-pa-md">
+            <q-card class="my-card">
+              <img src="https://cdn.quasar.dev/img/mountains.jpg">
+
+              <q-card-actions align="center">
+                <q-btn flat round color="green" class="text-h6">Successful</q-btn>
+              </q-card-actions>
+            </q-card>
+          </div>
+
       </div>
-      <div class="col q-gutter-md">
-        <q-card class="my-card">
-          <q-card-section class="bg-grey-6 text-white">
-            <div class="text-h6">Our Changing Planet</div>
-            <div class="text-subtitle2">by John Doe</div>
-          </q-card-section>
 
-          <q-separator />
-
-          <q-card-actions align="right">
-            <q-btn flat>Action 1</q-btn>
-          </q-card-actions>
-        </q-card>
-      </div>
-      <div class=" col q-gutter-md">
-        <q-card class="my-card">
-          <q-card-section class="bg-grey-6 text-white">
-            <div class="text-h6">Our Changing Planet</div>
-            <div class="text-subtitle2">by John Doe</div>
-          </q-card-section>
-
-          <q-separator />
-
-          <q-card-actions align="right">
-            <q-btn flat>Action 1</q-btn>
-          </q-card-actions>
-        </q-card>
-      </div>
-  </div>
-
-   </q-page>
+   </q-page-container>
 </template>
 
 <script>
