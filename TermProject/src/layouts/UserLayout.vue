@@ -18,7 +18,7 @@
         <q-btn push flat round icon="notifications" @click="this.$router.push('/rental')">
           <q-badge floating color="black" >22</q-badge>
         </q-btn>
-        <q-btn flat round dense icon="account_circle"/>
+        <q-btn flat round dense icon="account_circle" @click="this.$router.push('/')"/>
       </q-toolbar>
     </q-header>
 
@@ -66,6 +66,12 @@ const linksList = [
     caption: 'Rental Laptop',
     icon: 'laptop',
     link:'/rental'
+  },
+  {
+    title: 'Payment',
+    caption: 'Payment',
+    icon: 'payments',
+    link:'/payment'
   },
 ]
 
