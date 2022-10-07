@@ -26,12 +26,10 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
-      class="bg-pink-6 text-white"
+      class="bg-white"
     >
       <q-list>
         <q-item-label
-          header
-          class="text-white"
         >
           Navigation
         </q-item-label>
