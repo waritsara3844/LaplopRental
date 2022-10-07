@@ -27,7 +27,7 @@
             />
           </div><br>
           <div>
-            <q-btn label="Submit" type="submit" color="pink-7" style="width:100%" @click="this.router.push('/')"/>
+            <q-btn label="Submit" type="submit" color="pink-7" style="width:100%" @click="this.$router.push('/dashboard')"/>
           </div><br>
           <div>
              <center><a href="/register" class="text-white" >Not reigistered? Created an Account</a></center>

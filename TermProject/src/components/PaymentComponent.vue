@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/valid-v-model -->
 <template>
   <div class="row">
-    <div class="col q-gutter-md">
+    <div class="col-4 q-gutter-md">
       <q-card class="my-card" v-for="pay in pays" :key='pay'>
         <img src="https://cdn.quasar.dev/img/mountains.jpg">
         <q-card-actions align="center">

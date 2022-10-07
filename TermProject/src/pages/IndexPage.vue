@@ -1,7 +1,17 @@
 <template>
-  <q-page class="flex flex-center">
-    <h3>Welcome<h4>to Rental Shop</h4></h3>
-    <q-btn label="Login" @click="this.router.push('/login')"/>
+  <q-page class="flex flex-center" style="background-color: #fec3df"  >
+    <div class="row">
+      <div class="col">
+        <q-card-section>
+          <h3>Welcome<h4>to Rental Shop</h4></h3>
+        </q-card-section>
+        <q-card-section >
+          <center><q-btn label="Login" @click="this.$router.push('/login')"/></center>
+        </q-card-section>
+      </div>
+    </div>
+
+
   </q-page>
 </template>
 
@@ -12,19 +22,4 @@ export default defineComponent({
 })
 </script>
  <style>
-    body{
-    background-color: #fec3df;
-
-  }
-  h3{
-    font-family: 'Peralta', cursive;
-    font-size: 70px;
-    font-weight: bold;
-    text-align: center;
-  }
-  h4{
-    font-size: 50px;
-    font-weight: bold;
-  }
-
  </style>
