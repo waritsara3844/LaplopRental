@@ -1,17 +1,30 @@
 <template>
   <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    >
+    <h3>Welcome<h4>to Rental Shop</h4></h3>
+    <q-btn label="Login" @click="this.router.push('/login')"/>
   </q-page>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
-
 export default defineComponent({
   name: 'IndexPage'
 })
 </script>
+ <style>
+    body{
+    background-color: #fec3df;
+
+  }
+  h3{
+    font-family: 'Peralta', cursive;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+  }
+  h4{
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+ </style>

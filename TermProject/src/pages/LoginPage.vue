@@ -27,10 +27,10 @@
             />
           </div><br>
           <div>
-            <q-btn label="Submit" type="submit" color="pink-7" style="width:100%" class=""/>
+            <q-btn label="Submit" type="submit" color="pink-7" style="width:100%" @click="this.router.push('/')"/>
           </div><br>
           <div>
-             <center><a href="/register" class="text-white" >Create an Account</a></center>
+             <center><a href="/register" class="text-white" >Not reigistered? Created an Account</a></center>
           </div>
         </q-from>
       </q-card-section>
@@ -66,4 +66,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+</style>

@@ -32,8 +32,8 @@
          />
        </div>
      </div>
-     <div class="row"> <!---How to set the col to 3 column--->
-         <div class="col-4 q-pa-md">
+     <div class="row">
+         <div class="col-4 q-gutter-md">
              <PaymentComponent/>
          </div>
 
