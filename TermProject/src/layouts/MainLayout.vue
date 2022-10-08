@@ -66,6 +66,12 @@ const linksList = [
     icon: 'dashboard',
     link:'/dashboard'
   },
+  {
+    title: 'Manage',
+    caption: 'Manage Request',
+    icon: 'pending_actions',
+    link:'/manage'
+  },
 ]
 
 export default defineComponent({
