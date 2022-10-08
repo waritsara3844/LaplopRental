@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/valid-v-model -->
 <template>
-  <div class="row">
-    <div class="col q-gutter-md">
+  <div class="row  q-mt-md">
+    <div class="col">
       <q-card class="my-card" v-for="pay in pays" :key='pay'>
         <img src="https://cdn.quasar.dev/img/mountains.jpg">
         <q-card-actions align="center">
@@ -14,7 +14,7 @@
         <!--Dialog -->
         <q-dialog v-model="dialog" persistent>
             <q-card class="my-dialog-card">
-              <q-card-section class="row items-center">
+              <q-card-section class="row">
                 <span class="text-h6" >Calculate Total</span>
               </q-card-section>
               <q-separator />
@@ -37,7 +37,9 @@
             </q-card>
           </q-dialog>
 
+
       </q-card>
+
     </div>
   </div>
 </template>

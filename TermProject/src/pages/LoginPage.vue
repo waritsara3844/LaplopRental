@@ -1,71 +1,90 @@
 <template>
-  <q-page class="flex flex-center">
-    <q-card class="my-card bg-pink-6 q-px-md q-py-md" style="width:350px">
-      <div class="flex flex-center">
-        <q-icon name="account_circle" color="white" size="4rem"/>
-      </div>
-      <q-card-section>
-        <q-from>
-          <div>
-            <q-input
-              v-model="username"
-              type="text"
-              label="Your Username"
-              color="white"
-              lazy-rules
-              :rule="[(val)=>(val && val.length > 0)|| 'Must be at least 1 character!']"
-            />
+  <q-layout view="hHh Lpr lFf">
+    <q-page-container class="bg-pink-2">
+      <q-page padding class="row items-center justify-center">
+        <div class="row full-width">
+          <div class="col-md-8 offset-md-2 col-xs-12 q-pl-md q-pr-md q-pt-sm">
+            <q-card flat class="bg-white text-black">
+              <div class="row">
+                <div class="col-md-6 col-xs-12 q-pa-md">
+                  <q-img
+                    src="icons/Laptops.png"
+                    spinner-color="white"
+                  ></q-img>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                  <div class="q-pa-md">
+                    <div
+                      class="text-h6 q-pb-md text-pink-5 text-center text-weight-bolder"   >
+                      Login
+                    </div>
+                    <q-form
+                      @submit="onSubmit"
+                      @reset="onReset"
+                      class="q-gutter-md"
+                    >
+                      <q-input
+                        filled
+                        v-model="name"
+                        label="Username"
+                        lazy-rules
+                        :rules="[
+                          (val) =>
+                            (val && val.length > 0) || 'Please type Username',
+                        ]"
+                      />
+
+                      <q-input
+                        filled
+                        type="password"
+                        v-model="password"
+                        label="Password"
+                        lazy-rules
+                        :rules="[
+                          (val) =>
+                            (val !== null && val !== '') ||
+                            'Please type your password',]"
+                      />
+
+                      <div>
+                        <q-btn label="Login" type="submit" color="pink" @click="this.$router.push('/rental')" />
+                        <q-btn
+                          label="Reset"
+                          type="reset"
+                          color="pink"
+                          flat
+                          class="q-ml-sm"
+                        />
+                      </div>
+                    </q-form>
+                  </div>
+                </div>
+              </div>
+            </q-card>
           </div>
-          <div>
-            <q-input
-              v-model="password"
-              :type="isPwd ? 'password': 'text'"
-              label="Your Password"
-              color="white"
-              lazy-rules
-              :rule="[(val)=>(val && val.length >= 6)|| 'Must be at least 6 characters!']"
-            />
-          </div><br>
-          <div>
-            <q-btn label="Submit" type="submit" color="pink-7" style="width:100%" @click="this.$router.push('/dashboard')"/>
-          </div><br>
-          <div>
-             <center><a href="/register" class="text-white" >Not reigistered? Created an Account</a></center>
-          </div>
-        </q-from>
-      </q-card-section>
-    </q-card>
-  </q-page>
+        </div>
+      </q-page>
+    </q-page-container>
+  </q-layout>
 </template>
 
 <script>
-import { database } from "../stores/database"
-import { Notify } from "quasar"
 export default {
-  name:"LoginPage",
-  data(){
-    return{
-      username: null,
+  data() {
+    return {
+      name: null,
       password: null,
-      isPwd: true,
-    }
+    };
   },
-  methods:{
-    onReset(){
-      this.username = null
-      this.password = null
-      this.isPwd = true
+
+  methods: {
+    onSubmit() {
+      console.log("click submit");
     },
-    onSubmit(){
-      const data={
-        username: this.username,
-        password: this.password
-      }
-    }
-  }
+    onReset() {
+      this.name = null;
+      this.password = null;
+    },
+  },
 };
 </script>
-
-<style>
-
-</style>

@@ -33,7 +33,7 @@
        </div>
      </div>
      <div class="row">
-         <div class="col-4 q-gutter-md">
+         <div class="col q-ma-md">
              <PaymentComponent/>
          </div>
 
