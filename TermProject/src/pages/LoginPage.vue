@@ -91,9 +91,11 @@ export default {
   methods: {
 
     onSubmit() {
-      for(var index = 0; index < this.loginId.length ; index++) {
-        this.name == this.loginId[index].name && this.password == this.loginId[index].password ? this.$router.push('/rental') : null
-      }
+      // for(var index = 0; index < this.loginId.length ; index++) {}
+      if(this.name == this.loginId[0].name && this.password == this.loginId[0].password ){
+          this.$router.push('/dashboard')};
+      if(this.name == this.loginId[1].name && this.password == this.loginId[1].password ){
+          this.$router.push('/rental')};
 
   },
     onReset() {

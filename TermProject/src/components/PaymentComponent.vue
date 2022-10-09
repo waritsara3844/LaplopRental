@@ -4,7 +4,7 @@
     <div class="col">
       <q-card class="my-card" v-for="pay in pays" :key='pay'>
         <img src="https://cdn.quasar.dev/img/mountains.jpg">
-        <q-card-actions align="center">
+        <q-card-actions align="center" class="q-mb-md">
           <q-btn flat round color="primary"
             class="text-h6"
             @click="dialog = true"
@@ -84,7 +84,7 @@ export default {
   methods:{
     totalPrice(price){
       this.finalTotal = price + (price*(7/100))
-      console.log(this.finalTotal);
+      // console.log(this.finalTotal);
       return this.finalTotal
     },
     vatPrice(price){

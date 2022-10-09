@@ -14,6 +14,11 @@
         <q-toolbar-title>
           Laptop Rental System
         </q-toolbar-title>
+
+        <q-btn push flat round icon="notifications" @click="this.$router.push('/dashboard')">
+          <q-badge floating color="black" >22</q-badge>
+        </q-btn>
+        <q-btn flat round dense icon="account_circle" @click="this.$router.push('/login')"/>
       </q-toolbar>
     </q-header>
 
@@ -21,10 +26,10 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
+      class="bg-white"
     >
-      <q-list>
-        <q-item-label
-          header
+      <q-list >
+        <q-item-label class="text-grey-6 q-ma-sm"
         >
           Navigation
         </q-item-label>
@@ -54,10 +59,28 @@ const linksList = [
     icon: 'home',
     link:'/'
   },
+  {
+    title: 'Laptop',
+    caption: 'Rental Laptop',
+    icon: 'laptop',
+    link:'/rental'
+  },
+  {
+    title: 'Dashboard',
+    caption: 'Dashboard',
+    icon: 'dashboard',
+    link:'/dashboard'
+  },
+  {
+    title: 'Manage',
+    caption: 'Manage Request',
+    icon: 'pending_actions',
+    link:'/manage'
+  },
 ]
 
 export default defineComponent({
-  name: 'MainLayout',
+  name: 'AdminLayout',
 
   components: {
     EssentialLink
