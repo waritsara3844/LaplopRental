@@ -13,17 +13,17 @@
               label="Your Fullname"
               color="white"
               lazy-rules
-              :rule="[(val)=>(val && val.length > 0)|| 'Field is required']"
+            :rule="[ val => val && val.length > 0 ||  'Field is required']"
             />
           </div>
           <div>
             <q-input
-              v-model="email"
-              type="text"
+            v-model="email"
+              type="email"
               label="Your Email"
               color="white"
               lazy-rules
-              :rule="[emailValidation, requiredValidation]"
+              :rule="[ val => val && val.length > 0 || 'Field is required']"
             />
           </div>
           <div>
@@ -33,7 +33,7 @@
               label="Your Username"
               color="white"
               lazy-rules
-              :rule="[(val)=>(val && val.length > 0)|| 'Must be at least 1 character!']"
+              :rule="[ val => val && val.length > 0 || 'Must be at least 1 character!']"
             />
           </div>
           <div>
@@ -47,8 +47,8 @@
             />
           </div>
           <div>
-            <q-btn label="Submit" type="submit" color="pink-7" class="q-mt-md" />
-            <q-btn label="Reset" type="reset" color="pink-7"  class="q-ml-md q-mt-md"/>
+            <q-btn label="Submit" type="submit" @click="onSubmit()" color="pink-7" class="q-mt-md" />
+            <q-btn label="Reset" type="reset" @click="onReset()" color="pink-7"  class="q-ml-md q-mt-md"/>
           </div>
         </q-from>
       </q-card-section>
@@ -75,8 +75,11 @@ export default {
     onSubmit(){
       const data={
         username: this.username,
-        password: this.password
+        password: this.password,
+        email:this.email,
+
       }
+      console.log("🚀 ~ RegisterPage.vue ~ register new user ~ onSubmit ~ data", data)
     }
   }
 };
