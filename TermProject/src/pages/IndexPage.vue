@@ -22,4 +22,7 @@ export default defineComponent({
 })
 </script>
  <style>
+ h3{
+  font-family: 'Peralta', 'cursive';
+ }
  </style>

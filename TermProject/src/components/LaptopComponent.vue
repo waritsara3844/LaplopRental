@@ -2,10 +2,10 @@
   <q-card class="my-card">
     <img src="https://cdn.quasar.dev/img/mountains.jpg">
     <q-card-actions align="center">
-      <q-btn flat round color="yellow"
+      <q-btn flat round color="green"
         class="text-h6"
         @click="dialog = true"
-        label="Inprocess"/>
+        label="Successful"/>
     </q-card-actions>
 
     <!--Dialog -->

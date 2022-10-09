@@ -54,9 +54,7 @@
               <img src="https://cdn.quasar.dev/img/mountains.jpg">
 
               <q-card-actions align="center">
-                <q-btn flat round color="red"
-                class="text-h6"
-                label="Rented"/>
+                <q-btn flat round color="yellow" class="text-h6" label="Inprocess"/>
               </q-card-actions>
             </q-card>
           </div>
@@ -66,7 +64,7 @@
               <img src="https://cdn.quasar.dev/img/mountains.jpg">
 
               <q-card-actions align="center">
-                <q-btn flat round color="red" class="text-h6" label="Rented"/>
+                <q-btn flat round color="yellow" class="text-h6" label="Inprocess"/>
               </q-card-actions>
             </q-card>
           </div>

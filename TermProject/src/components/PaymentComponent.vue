@@ -1,14 +1,14 @@
 <!-- eslint-disable vue/valid-v-model -->
 <template>
-  <div class="row  q-mt-md">
+  <div class="row  ">
     <div class="col">
       <q-card class="my-card" v-for="pay in pays" :key='pay'>
         <img src="https://cdn.quasar.dev/img/mountains.jpg">
         <q-card-actions align="center">
-          <q-btn flat round color="green"
+          <q-btn flat round color="primary"
             class="text-h6"
             @click="dialog = true"
-            label="Successful"/>
+            label="Payment"/>
         </q-card-actions>
 
         <!--Dialog -->
