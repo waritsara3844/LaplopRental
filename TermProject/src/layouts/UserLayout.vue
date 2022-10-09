@@ -28,8 +28,8 @@
       bordered
       class="bg-white"
     >
-      <q-list>
-        <q-item-label
+      <q-list >
+        <q-item-label class="text-grey-6 q-ma-sm"
         >
           Navigation
         </q-item-label>

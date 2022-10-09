@@ -47,13 +47,14 @@
                       />
 
                       <div>
-                        <q-btn label="Login" type="submit" color="pink" @click="this.$router.push('/rental')" />
+                        <q-btn label="Login" type="submit" color="pink" @click="onSubmit()" />
                         <q-btn
                           label="Reset"
                           type="reset"
                           color="pink"
                           flat
                           class="q-ml-sm"
+                          @click="onReset()"
                         />
                       </div>
                     </q-form>
@@ -72,15 +73,29 @@
 export default {
   data() {
     return {
-      name: null,
-      password: null,
+      name: '',
+      password: '',
+      loginId:[
+        {
+          name: 'Admin',
+          password: '12345**'
+        },
+        {
+          name: 'User',
+          password: '123456'
+        },
+      ]
     };
   },
 
   methods: {
+
     onSubmit() {
-      console.log("click submit");
-    },
+      for(var index = 0; index < this.loginId.length ; index++) {
+        this.name == this.loginId[index].name && this.password == this.loginId[index].password ? this.$router.push('/rental') : null
+      }
+
+  },
     onReset() {
       this.name = null;
       this.password = null;
