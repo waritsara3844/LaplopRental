@@ -2,7 +2,7 @@ import { defineStore } from 'pinia';
 import { useStorage } from '@vueuse/core';
 
 
-export const useCounterStore = defineStore('counter', {
+export const useCounterStore = defineStore('database', {
   state: () => ({
     counter: 0
   }),

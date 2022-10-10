@@ -8,13 +8,24 @@
         :columns="columns"
         row-key="name"
       >
-        <template v-slot:body-cell-actions="props">
-          <q-td :props="props">
-            <q-btn icon="home" ></q-btn>
+        <template v-slot:body="props">
+          <q-tr :props="props">
+            <q-td key="name" :props="props">
+            {{ props.row.name }}
           </q-td>
-          <q-td :props="props">
-            <q-btn icon="delete" ></q-btn>
+          <q-td key="tel" :props="props">
+            {{ props.row.tel }}
           </q-td>
+          <q-td key="date" :props="props">
+            {{ props.row.date }}
+          </q-td>
+          <q-td key="accept" :props="props">
+            <q-btn icon="check"/>
+          </q-td>
+          <q-td key="decline" :props="props">
+            <q-btn icon="delete"/>
+          </q-td>
+          </q-tr>
         </template>
       </q-table>
     </div>
@@ -23,7 +34,6 @@
 
 <script>
 import { date } from "quasar";
-
 const columns = [
   {
     name: "name",
@@ -71,6 +81,7 @@ const rows = [
 ];
 
 export default {
+  name:"ManagePage",
   setup() {
     return {
       columns,

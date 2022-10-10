@@ -9,7 +9,6 @@ const routes = [
       // { path: '/register', component: () => import('pages/RegisterPage.vue') },
       // { path: '/dashboard', component: () => import('pages/DashboardPage.vue') },
       // { path: '/payment', component: () => import('pages/PaymentPage.vue') },
-      // { path: '/manage', component: () => import('pages/ManagePage.vue') }
 
 
     ]
@@ -37,7 +36,9 @@ const routes = [
       { path: '/register', component: () => import('pages/RegisterPage.vue') },
       { path: '/rental', component: () => import('pages/RentalLaptopPage.vue') },
       { path: '/dashboard', component: () => import('pages/DashboardPage.vue') },
-      { path: '/payment', component: () => import('pages/PaymentPage.vue') }
+      { path: '/payment', component: () => import('pages/PaymentPage.vue') },
+      { path: '/manage', component: () => import('pages/ManagePage.vue') }
+
 
     ]
   },
