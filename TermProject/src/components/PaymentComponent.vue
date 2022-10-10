@@ -109,5 +109,6 @@ export default {
 <style>
 .my-dialog-card {
   width: 250px;
+  height:auto;
 }
 </style>

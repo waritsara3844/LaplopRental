@@ -84,24 +84,26 @@ export default {
   data(){
     return{
       data: useLoginUserStore(),
-
       rows: [
-  {
-    name: "Warit",
-    tel: "0987452729",
-    date: "09/30/2022 to 10/30/2022",
-  },
-  {
-    name: "Puntira",
-    tel: "0966444799",
-    date: "09/28/2022 to 10/15/2022",
-  },
-  {
-    name: "Motana",
-    tel: "0980154177",
-    date: "10/7/2022 to 11/30/2022",
-  },
-]
+    {
+      id:1,
+      name: "Warit",
+      tel: "0987452729",
+      date: "09/30/2022 to 10/30/2022",
+    },
+    {
+      id:2,
+      name: "Puntira",
+      tel: "0966444799",
+      date: "09/28/2022 to 10/15/2022",
+    },
+    {
+      id:3,
+      name: "Motana",
+      tel: "0980154177",
+      date: "10/7/2022 to 11/30/2022",
+    },
+  ]
     }
   }
 };

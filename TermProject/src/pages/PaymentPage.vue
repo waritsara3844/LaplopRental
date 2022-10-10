@@ -36,8 +36,6 @@
          <div class=" q-pa-md q-mb-sm">
              <PaymentComponent/>
          </div>
-
-
       </div>
   </q-page>
 </template>

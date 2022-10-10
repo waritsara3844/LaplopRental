@@ -1,8 +1,10 @@
 import { defineStore } from "pinia";
 import { useStorage } from "@vueuse/core";
 
+
 export const useLoginUserStore = defineStore("loginuser", {
   state: () => ({
+
     userid: useStorage("userid", ""),
     username: useStorage("username", ""),
     loginId:[
@@ -37,5 +39,9 @@ export const useLoginUserStore = defineStore("loginuser", {
     addAccRequest(row){
       this.acceptedRequest.push(row)
     }
+
   },
+
 });
+
+
