@@ -16,7 +16,7 @@
         </q-toolbar-title>
 
         <q-btn push flat round icon="notifications" @click="this.$router.push('/rental')">
-          <q-badge floating color="black" >22</q-badge>
+          <q-badge floating color="black" >16</q-badge>
         </q-btn>
         <q-btn flat round dense icon="account_circle" @click="this.$router.push('/login')"/>
       </q-toolbar>
