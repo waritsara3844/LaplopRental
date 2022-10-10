@@ -1,5 +1,5 @@
 <template>
-  <q-card class="my-card">
+  <q-card class="q-ma-md">
     <img src="https://cdn.quasar.dev/img/mountains.jpg">
     <q-card-actions align="center">
       <q-btn flat round color="green"
@@ -30,12 +30,18 @@
 
 <script>
 import { ref } from "vue"
+import { useLoginUserStore} from '../stores/database';
 export default {
   name: "LaptopComponent",
   setup () {
     return {
       dialog:ref(false),
       payment:ref(false),
+    }
+  },
+  data(){
+    return{
+      data: useLoginUserStore(),
     }
   }
 }

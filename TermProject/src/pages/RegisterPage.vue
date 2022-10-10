@@ -57,20 +57,22 @@
 </template>
 
 <script>
+import { useLoginUserStore } from "../stores/database"
 export default {
   name:"RegisterPage",
   data(){
     return{
       username: null,
       password: null,
-      isPwd: true,
+      storeLogUser: useLoginUserStore(),
     }
   },
   methods:{
     onReset(){
       this.username = null
       this.password = null
-      this.isPwd = true
+      this.email = null
+
     },
     onSubmit(){
       const data={

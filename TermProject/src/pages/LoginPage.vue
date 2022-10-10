@@ -25,7 +25,7 @@
                     >
                       <q-input
                         filled
-                        v-model="name"
+                        v-model="username"
                         label="Username"
                         lazy-rules
                         :rules="[
@@ -70,33 +70,38 @@
 </template>
 
 <script>
+import { useLoginUserStore } from "../stores/database";
 export default {
   data() {
     return {
-      name: '',
-      password: '',
-      loginId:[
-        {
-          name: 'Admin',
-          password: '12345**'
-        },
-        {
-          name: 'User',
-          password: '123456'
-        },
-      ]
+      username:'' ,
+      password:'',
+      storeLogUser: useLoginUserStore(),
+      // loginId:[
+      //   {
+      //     username: 'Admin',
+      //     password: '12345**'
+      //   },
+      //   {
+      //     username: 'User',
+      //     password: '123456'
+      //   },
+      // ]
     };
   },
 
   methods: {
 
     onSubmit() {
-      // for(var index = 0; index < this.loginId.length ; index++) {}
-      if(this.name == this.loginId[0].name && this.password == this.loginId[0].password ){
-          this.$router.push('/dashboard')};
-      if(this.name == this.loginId[1].name && this.password == this.loginId[1].password ){
-          this.$router.push('/rental')};
 
+        if(this.username === this.storeLogUser.loginId[0].username && this.password === this.storeLogUser.loginId[0].password){
+          this.$router.push('/dashboard')
+          console.log(`Admin`);
+        }
+        if(this.username === this.storeLogUser.loginId[1].username && this.password === this.storeLogUser.loginId[1].password){
+          this.$router.push('/rental')
+          console.log(`User`);
+        }
   },
     onReset() {
       this.name = null;

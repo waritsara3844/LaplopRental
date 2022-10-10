@@ -33,61 +33,10 @@
         </div>
       </div>
       <div class="row"> <!---How to set the col to 3 column--->
-          <div class="col-4 q-pa-md">
-              <LaptopComponent/>
+          <div class="col-4" v-for="i in this.data.getAccRequest" :key="i.name" >
+            <LaptopComponent />
+           i: {{i}}
           </div>
-
-          <div class="col-4 q-pa-md">
-            <q-card class="my-card">
-              <img src="https://cdn.quasar.dev/img/mountains.jpg">
-
-              <q-card-actions align="center">
-                <q-btn flat round color="green"
-                class="text-h6"
-                label="Successful"/>
-              </q-card-actions>
-            </q-card>
-          </div>
-
-          <div class="col-4 q-pa-md">
-            <q-card class="my-card">
-              <img src="https://cdn.quasar.dev/img/mountains.jpg">
-
-              <q-card-actions align="center">
-                <q-btn flat round color="yellow" class="text-h6" label="Inprocess"/>
-              </q-card-actions>
-            </q-card>
-          </div>
-
-          <div class="col-4 q-pa-md">
-            <q-card class="my-card">
-              <img src="https://cdn.quasar.dev/img/mountains.jpg">
-
-              <q-card-actions align="center">
-                <q-btn flat round color="yellow" class="text-h6" label="Inprocess"/>
-              </q-card-actions>
-            </q-card>
-          </div>
-
-          <div class="col-4 q-pa-md">
-            <q-card class="my-card">
-              <img src="https://cdn.quasar.dev/img/mountains.jpg">
-
-              <q-card-actions align="center">
-                <q-btn flat round color="yellow" class="text-h6" label="Inprocess"/>
-              </q-card-actions>
-            </q-card>
-          </div>
-          <div class="col-4 q-pa-md">
-            <q-card class="my-card">
-              <img src="https://cdn.quasar.dev/img/mountains.jpg">
-
-              <q-card-actions align="center">
-                <q-btn flat round color="green" class="text-h6" label="Successful"/>
-              </q-card-actions>
-            </q-card>
-          </div>
-
       </div>
    </q-page>
 </template>
@@ -95,6 +44,7 @@
 <script>
 import { ref } from 'vue';
 import LaptopComponent from "../components/LaptopComponent.vue";
+import { useLoginUserStore} from '../stores/database';
 export default {
   name:"RentalLaptopPage",
   components:{
@@ -105,6 +55,16 @@ export default {
       dialog:ref(false)
     }
   },
+  data(){
+    return {
+      data: useLoginUserStore(),
+    }
+  },
+  methods:{
+    removeStatus(name){
+      this.name = this.data.getAccRequest.name.filter((item)=>item.name != name)
+    }
+  }
 }
 </script>
 

@@ -20,10 +20,10 @@
             {{ props.row.date }}
           </q-td>
           <q-td key="accept" :props="props">
-            <q-btn icon="check"/>
+            <q-btn icon="check" @click="this.acceptRequest(props.row)"/>
           </q-td>
           <q-td key="decline" :props="props">
-            <q-btn icon="delete"/>
+            <q-btn icon="delete" @click="this.removeReq(props.row.name)"/>
           </q-td>
           </q-tr>
         </template>
@@ -34,6 +34,8 @@
 
 <script>
 import { date } from "quasar";
+import { useLoginUserStore} from '../stores/database';
+
 const columns = [
   {
     name: "name",
@@ -62,7 +64,28 @@ const columns = [
   { name: "decline", align: "center", label: "Decline", field: "icon_decline" },
 ];
 
-const rows = [
+
+export default {
+  name:"ManagePage",
+  setup() {
+    return {
+      columns,
+    };
+  },
+  methods:{
+    removeReq(name){
+      this.rows = this.rows.filter((item) => item.name != name);
+    },
+    acceptRequest(row){
+      this.data.addAccRequest(row);
+      this.removeReq(row.name);
+    }
+  },
+  data(){
+    return{
+      data: useLoginUserStore(),
+
+      rows: [
   {
     name: "Warit",
     tel: "0987452729",
@@ -78,15 +101,8 @@ const rows = [
     tel: "0980154177",
     date: "10/7/2022 to 11/30/2022",
   },
-];
-
-export default {
-  name:"ManagePage",
-  setup() {
-    return {
-      columns,
-      rows,
-    };
-  },
+]
+    }
+  }
 };
 </script>

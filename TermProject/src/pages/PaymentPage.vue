@@ -32,16 +32,11 @@
          />
        </div>
      </div>
-     <div class="row ">
-         <div class="col-4 q-pa-md q-mb-sm">
+     <div>
+         <div class=" q-pa-md q-mb-sm">
              <PaymentComponent/>
          </div>
-         <div class="col-4 q-pa-md q-mb-sm">
-             <PaymentComponent/>
-         </div>
-         <div class="col-4 q-pa-md q-mb-sm ">
-             <PaymentComponent/>
-         </div>
+
 
       </div>
   </q-page>

@@ -1,21 +1,41 @@
-import { defineStore } from 'pinia';
-import { useStorage } from '@vueuse/core';
+import { defineStore } from "pinia";
+import { useStorage } from "@vueuse/core";
 
-
-export const useCounterStore = defineStore('database', {
+export const useLoginUserStore = defineStore("loginuser", {
   state: () => ({
-    counter: 0
-  }),
+    userid: useStorage("userid", ""),
+    username: useStorage("username", ""),
+    loginId:[
+      {
+        username: 'Admin',
+        password: '12345**'
+      },
+      {
+        username: 'User',
+        password: '123456'
+      },
 
+    ],
+    acceptedRequest: useStorage('acceptedRequest' , [])
+  }),
   getters: {
-    doubleCount (state) {
-      return state.counter * 2
+    getUserId: (state) => {
+      return state.userid;
+    },
+    getUsername: (state) => {
+      return state.username;
+    },
+    getAccRequest: (state) =>{
+      return state.acceptedRequest;
     }
   },
-
   actions: {
-    increment () {
-      this.counter++
+    clearStorage() {
+      this.userid = "";
+      this.username = "";
+    },
+    addAccRequest(row){
+      this.acceptedRequest.push(row)
     }
-  }
-})
+  },
+});
