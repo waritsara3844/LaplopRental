@@ -15,7 +15,7 @@
                 <div class="col-md-6 col-xs-12">
                   <div class="q-pa-md">
                     <div
-                      class="text-h6 q-pb-md text-pink-5 text-center text-weight-bolder"   >
+                      class="text-h6 q-pb-md text-pink-5 text-center text-weight-bolder q-mt-xl"   >
                       Login
                     </div>
                     <q-form
@@ -56,6 +56,9 @@
                           class="q-ml-sm"
                           @click="onReset()"
                         />
+                      </div>
+                      <div>
+                        <center><a href="/register" class="text-grey-6">Create new Account</a></center>
                       </div>
                     </q-form>
                   </div>

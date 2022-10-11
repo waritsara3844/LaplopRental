@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated >
-      <q-toolbar class="bg-pink-6 text-white">
+      <q-toolbar class="bg-grey-6 text-white">
         <q-btn
           flat
           dense
@@ -11,10 +11,15 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
-          Laptop Rental System
-        </q-toolbar-title>
+
+        <q-toolbar class="text-white">
+      <q-toolbar-title>
+        Laptop Rental
+      </q-toolbar-title>
+      <q-btn  round dense icon="account_circle" color="grey-6" @Click="this.$router.push('/login')"/>
+    </q-toolbar>
       </q-toolbar>
+
     </q-header>
 
     <q-drawer

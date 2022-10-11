@@ -16,9 +16,10 @@ export const useLoginUserStore = defineStore("loginuser", {
         username: 'User',
         password: '123456'
       },
-
     ],
-    acceptedRequest: useStorage('acceptedRequest' , [])
+    acceptedRequest: useStorage('acceptedRequest' , []),
+
+
   }),
   getters: {
     getUserId: (state) => {
@@ -39,6 +40,7 @@ export const useLoginUserStore = defineStore("loginuser", {
     addAccRequest(row){
       this.acceptedRequest.push(row)
     }
+
 
   },
 

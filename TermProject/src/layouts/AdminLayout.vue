@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated >
-      <q-toolbar class="bg-pink-6 text-white">
+      <q-toolbar class="grey-6 text-white">
         <q-btn
           flat
           dense
@@ -76,6 +76,12 @@ const linksList = [
     caption: 'Manage Request',
     icon: 'pending_actions',
     link:'/manage'
+  },
+  {
+    title: "Admin",
+    caption: "Admin",
+    icon: "perm_identity",
+    link: "/admin",
   },
 ]
 

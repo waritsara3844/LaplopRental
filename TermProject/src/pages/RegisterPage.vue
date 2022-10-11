@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center">
-    <q-card class="my-card bg-pink-6 q-px-md q-py-md" >
+    <q-card class="my-card bg-pink-3 q-px-md q-py-md" >
       <div class="flex flex-center">
         <q-icon name="account_circle" color="white" size="4rem"/>
       </div>
@@ -47,8 +47,8 @@
             />
           </div>
           <div>
-            <q-btn label="Submit" type="submit" @click="onSubmit()" color="pink-7" class="q-mt-md" />
-            <q-btn label="Reset" type="reset" @click="onReset()" color="pink-7"  class="q-ml-md q-mt-md"/>
+            <q-btn label="Submit" type="submit" @click="onSubmit()" color="grey" class="q-mt-md" />
+            <q-btn label="Reset" type="reset" @click="onReset()" color="grey"  class="q-ml-md q-mt-md"/>
           </div>
         </q-from>
       </q-card-section>
@@ -62,13 +62,16 @@ export default {
   name:"RegisterPage",
   data(){
     return{
+      fullname:null,
       username: null,
       password: null,
+      email:null,
       storeLogUser: useLoginUserStore(),
     }
   },
   methods:{
     onReset(){
+      this.fullname=null,
       this.username = null
       this.password = null
       this.email = null
@@ -76,12 +79,14 @@ export default {
     },
     onSubmit(){
       const data={
+        fullname: this.fullname,
         username: this.username,
         password: this.password,
         email:this.email,
 
       }
       console.log("🚀 ~ RegisterPage.vue ~ register new user ~ onSubmit ~ data", data)
+      this.onReset()
     }
   }
 };
