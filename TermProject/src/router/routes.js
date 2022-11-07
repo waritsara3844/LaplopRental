@@ -39,6 +39,7 @@ const routes = [
       { path: '/payment', component: () => import('pages/PaymentPage.vue') },
       { path: '/manage', component: () => import('pages/ManagePage.vue') },
       { path: '/admin', component: () => import('pages/AdminManagePage.vue') },
+      { path: '/sum', component: () => import('pages/allSummary.vue') },
 
 
 

@@ -79,6 +79,7 @@ export default {
     acceptRequest(row){
       this.data.addAccRequest(row);
       this.removeReq(row.name);
+      console.log(row.name)
     }
   },
   data(){

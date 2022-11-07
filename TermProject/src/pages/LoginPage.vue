@@ -98,8 +98,9 @@ export default {
     onSubmit() {
 
         if(this.username === this.storeLogUser.loginId[0].username && this.password === this.storeLogUser.loginId[0].password){
-          this.$router.push('/dashboard')
-          console.log(`Admin`);
+          this.$router.push('/admin')
+          console.log(this.username);
+          console.log(this.password);
         }
         if(this.username === this.storeLogUser.loginId[1].username && this.password === this.storeLogUser.loginId[1].password){
           this.$router.push('/rental')

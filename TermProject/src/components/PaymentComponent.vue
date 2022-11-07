@@ -3,7 +3,7 @@
   <div>
     <div class="row">
       <q-card class="my-card q-mr-md " v-for="pay in pays" :key="pay" style="width: 300px;">
-        <img src="https://cdn.quasar.dev/img/mountains.jpg"  />
+        <img src="https://plus.unsplash.com/premium_photo-1663931932637-e30332303b71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"  />
         <q-card-actions align="center" class="q-mb-md">
           <q-btn
             flat
